@@ -4,6 +4,7 @@ const options = {
   "force new connection": true,
   reconnectionAttempts: "Infinity",
   timeout: 10000,
+  secure: true,
   transports: ["websocket"],
 };
 
