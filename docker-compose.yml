@@ -1,0 +1,8 @@
+version: "3.1"
+services:
+  server:
+    container_name: web-rtc-server
+    build: "./"
+    restart: on-failure:10
+    ports:
+      - 3001:3001
