@@ -4,8 +4,8 @@ const app = express();
 const server = require("http").createServer(app);
 const io = require("socket.io")(server);
 const { version, validate } = require("uuid");
-
 const ACTIONS = require("./src/socket/actions");
+
 const PORT = process.env.PORT || 3001;
 
 function getClientRooms() {

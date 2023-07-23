@@ -12,8 +12,6 @@ export default function useWebRTC(roomID) {
 
   const addNewClient = useCallback(
     (newClient, cb) => {
-      console.log("new", newClient);
-      console.log("all", clients);
       if (!clients.includes(newClient)) {
         updateClients((prevClients) => [...prevClients, newClient], cb);
       }
@@ -76,6 +74,7 @@ export default function useWebRTC(roomID) {
     };
 
     socket.on(ACTIONS.ADD_PEER, addNewPeerHandler);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -127,6 +126,7 @@ export default function useWebRTC(roomID) {
     };
 
     socket.on(ACTIONS.REMOVE_PEER, removePeerHandler);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

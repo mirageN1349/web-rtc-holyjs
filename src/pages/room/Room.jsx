@@ -26,7 +26,7 @@ const layout = (clientsNumber = 1) => {
 const Room = () => {
   const { id: roomID } = useParams();
   const { clients, provideMediaRef } = useWebRTC(roomID);
-
+  console.log(clients);
   const videoLayout = layout(clients.length);
 
   return (
