@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start:dev-server": "npx nodemon server.js",
-    "start:server": "pm2 start server.js",
+    "start:server": "node server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
